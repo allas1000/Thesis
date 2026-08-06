@@ -1,0 +1,14 @@
+# Normalise line endings in the repository to LF. Without this the repo mixes
+# CRLF and LF, and every commit made on Windows shows whole files as changed.
+* text=auto eol=lf
+
+# Binary, never normalise or diff as text.
+*.png   binary
+*.pdf   binary
+*.xlsx  binary
+*.pptx  binary
+*.parquet binary
+
+# Notebooks are JSON. Keep them as text but suppress the diff, which is
+# unreadable and dominated by output blobs.
+*.ipynb text -diff

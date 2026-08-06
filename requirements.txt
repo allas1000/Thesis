@@ -1,0 +1,24 @@
+# Everything the scripts in scripts/ need.
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+
+# Additionally needed by the notebooks. Scoring also needs a GPU.
+# transformers is pinned because the two notebooks were run under different
+# releases, 4.51.3 for the main study and 4.46.3 for the pilot, and the
+# tokeniser defaults changed between them.
+torch>=2.0
+transformers==4.51.3
+bitsandbytes>=0.43
+huggingface_hub>=0.23
+scipy>=1.11
+seaborn>=0.13
+tqdm>=4.66
+pyarrow>=14.0
+
+# Kim et al.'s setup_data.py and utilities.py in data/kim_garg/ import the three
+# packages below. Nothing in this repository runs those files, so install them
+# only if you want to execute the upstream code directly.
+# scikit-learn>=1.3
+# sentence-transformers>=2.2
+# boto3>=1.28

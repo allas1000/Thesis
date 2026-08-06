@@ -1,0 +1,71 @@
+# ----------------------------------------------------------------------------
+# Python
+# ----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ----------------------------------------------------------------------------
+# IDE and editor
+# ----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ----------------------------------------------------------------------------
+# OS
+# ----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----------------------------------------------------------------------------
+# Secrets, never commit
+# ----------------------------------------------------------------------------
+.env
+.env.local
+*.pem
+*.key
+*token*.txt
+.aws/credentials
+
+# ----------------------------------------------------------------------------
+# Raw datasets. Too large to track and licensed by their sources.
+# See data/raw/README.md for download links.
+# ----------------------------------------------------------------------------
+data/raw/upwork-jobs.csv
+data/raw/Resume.csv
+data/raw/resume_samples.txt
+
+# ----------------------------------------------------------------------------
+# Recovered resume text. Never commit.
+# These files carry names, e-mail addresses, telephone numbers, and profile
+# links belonging to real job seekers. Kim et al. published hashes rather than
+# text for this reason. Regenerate them locally with the scripts, and publish
+# only the neutralised versions in data/processed/neutralised/.
+# ----------------------------------------------------------------------------
+data/processed/final_with_text.csv
+data/processed/final_with_text_cleaned.csv
+data/processed/resumes_unique.txt
+
+# ----------------------------------------------------------------------------
+# Local-only artefacts
+# ----------------------------------------------------------------------------
+scripts/test_pipeline.py
+data/processed/results_test.csv
